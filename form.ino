@@ -36,6 +36,7 @@ void setup() {
     // Sprawdzamy, czy użytkownik wysłał tekst w formularzu (pole "newVolume")
     if (server.hasArg("newVolume")) {
       VOLUME = server.arg("newVolume").toInt(); // Zapamiętujemy nową wartość
+      audio.setVolume(VOLUME);
     }
 
     // Budujemy stronę HTML z aktualną wartością i formularzem
