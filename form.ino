@@ -6,8 +6,8 @@
     #define I2S_DOUT      25
     #define I2S_BCLK      27
     #define I2S_LRC       26
-    #define VOLUME        21
-    #define ADDRESS "http://62.133.128.18:8040/listen.pls"
+    int VOLUME = 21;
+    String ADDRESS = "http://62.133.128.18:8040/listen.pls";
 #define WIFI_SSID "multimedia_Cegielnia18"
 #define WIFI_PASSWORD "Cegieldanci91"
 
