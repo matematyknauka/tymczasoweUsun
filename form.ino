@@ -39,7 +39,7 @@ void setup() {
     }
 
     // Budujemy stronę HTML z aktualną wartością i formularzem
-    String html = "<h1>Glosnosc: " + VOLUME + "</h1>";
+    String html = "<h1>Glosnosc: " + String(VOLUME) + "</h1>";
     html += "<form action='/' method='GET'>";
     html += "<input type='text' name='newVolume' placeholder='Wpisz wartosc'>";
     html += "<input type='submit' value='Zapisz'>";
@@ -52,7 +52,7 @@ void setup() {
 
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
   audio.setVolume(VOLUME); // default 0...21
-  audio.connecttohost(ADDRESS);
+  audio.connecttohost(ADDRESS.c_str());
 }
 
 void loop() {
