@@ -39,6 +39,11 @@ void setup() {
       audio.setVolume(VOLUME);
     }
 
+    if (server.hasArg("newAddress")) {
+      ADDRESS = server.arg("newAddress"); // Zapamiętujemy nową wartość
+      audio.connecttohost(ADDRESS.c_str());
+    }
+
     // Budujemy stronę HTML z aktualną wartością i formularzem
     String html = "<h1>Glosnosc: " + String(VOLUME) + "</h1>";
     html += "<form action='/' method='GET'>";
